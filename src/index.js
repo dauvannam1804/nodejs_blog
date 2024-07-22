@@ -11,9 +11,9 @@ const route = require('./routes');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(
-  express.urlencoded({
-    extended: true,
-  }),
+    express.urlencoded({
+        extended: true,
+    }),
 );
 app.use(express.json());
 
@@ -22,10 +22,10 @@ app.use(express.json());
 
 // Template engine
 app.engine(
-  'hbs',
-  handlebars.engine({
-    extname: '.hbs',
-  }),
+    'hbs',
+    handlebars.engine({
+        extname: '.hbs',
+    }),
 );
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
@@ -35,5 +35,5 @@ console.log(__dirname);
 route(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+    console.log(`Example app listening on port ${port}`);
 });
